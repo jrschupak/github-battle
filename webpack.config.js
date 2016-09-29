@@ -1,6 +1,6 @@
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var HtmlWebpackPluginCongif = new HtmlWebpackPlugin ({
-	template: _dirname + "./app/index.html",
+	template: __dirname + "/app/index.html",
 	filename: 'index.html',
 	inject: 'body'
 })
@@ -10,15 +10,13 @@ module.exports = {
 	 './app/index.js'
 	],
 	output: {
-		path: _dirname + "/dist",
+		path: __dirname + "/dist",
 		filename: "index_bundle.js"
 	},
 	module: {
 		loaders: [
-		 {test: /\.js$, exclude: /node_modules/, loader: "babel-loader"}
+		 {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
 		]
 	},
-	plugins: [
-		HtmlWebpackPluginConfig
-	]
+	plugins: [HtmlWebpackPluginCongif]
 }
