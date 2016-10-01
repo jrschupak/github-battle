@@ -5,12 +5,12 @@ var HelloWorld = React.createClass({
 	render: function(){
 		console.log(this.props)
 		return(
-			<div>Hello World I am React</div>
+			<div>Hello {this.props.name}</div>
 			)
 	}
 })
 
 ReactDOM.render(
-	<HelloWorld name="Jonathan" anySortOfData={29}/>,
+	<HelloWorld name="Jonathan"/>,
 	document.getElementById('app')
 )
