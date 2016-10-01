@@ -14,4 +14,4 @@ var routes = (
 	</Router>
 	)
 
-modules.exports routes;
+module.exports = routes;
