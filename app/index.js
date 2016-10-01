@@ -1,11 +1,30 @@
 var React = require ('react');
 var ReactDOM = require ('react-dom');
 
+//Acronym for testing your componenets
+/*
+	Focused
+	Independent
+	Reusable
+	Small
+	Testable
+*/
+
 var USER_DATA = {
 	name: 'Jonathan',
 	username: "jrschupak",
-	image: "https://www.facebook.com/photo.php?fbid=677596202382826&set=a.154861257989659.38200.100003973587618&type=3&theater"
+	image: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/13138851_677596202382826_8039513900230152078_n.jpg?oh=57e0a1833fd6520e2d5f777ac9449314&oe=5869FA6F"
 }
+
+var Link = React.createClass({
+	render: function() {
+		return(
+			<span style={{color: 'blue', cursor: 'pointer'}}>
+				{this.props.children}
+			</span>
+			)
+	}
+})
 
 var ProfilePic = React.createClass({
 	render: function() {
@@ -19,9 +38,9 @@ var ProfileLink = React.createClass({
 	render: function() {
 		return(
 			<div>
-			 <a href={"https://github.com/" + this.props.username}> 
+			 <Link href={"https://github.com/" + this.props.username}> 
 			 	{this.props.username}
-			 </a>
+			 </Link>
 			</div>
 			)
 	}
