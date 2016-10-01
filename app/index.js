@@ -17,9 +17,14 @@ var USER_DATA = {
 }
 
 var Link = React.createClass({
+
+	changeURL: function () {
+		window.location.replace(this.props.href);
+	},
+
 	render: function() {
 		return(
-			<span style={{color: 'blue', cursor: 'pointer'}}>
+			<span style={{color: 'blue', cursor: 'pointer'}} onClick={this.changeURL}>
 				{this.props.children}
 			</span>
 			)
